@@ -10,7 +10,7 @@ description: "An assignment focused on the crucial process of data wrangling, co
 
 **Introduction**
 
-This week’s assignment focused on **Data Wrangling,** which refers to the process of converting raw data into a desired and usable format for data science through cleaning, structuring, and enriching, which allows for better decision-making in less time. Through this assignment, I was able to develop hands-on experience automating web data gathering using the Kaggle dataset. The task was to practice data wrangling concepts to clean up the Netflix dataset available on  Kaggle. The link was: [Netflix dataset](%20%20https://www.kaggle.com/datasets/shivamb/netflix-shows).
+This week’s assignment focused on **Data Wrangling,** which refers to the process of converting raw data into a desired and usable format for data science through cleaning, structuring, and enriching, which allows for better decision-making in less time. Through this assignment, I was able to develop hands-on experience automating web data gathering using the Kaggle dataset. The task was to practice data wrangling concepts to clean up the Netflix dataset available on  Kaggle. The link was: [Netflix dataset](https://www.kaggle.com/datasets/shivamb/netflix-shows).
 
 The objectives of this assignment were:
 
