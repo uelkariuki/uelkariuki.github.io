@@ -12,7 +12,7 @@ order: 4
 
 ## UEL KARIUKI
 ### Backend Software Engineer
-Nairobi, Kenya &bull; 0705361013 &bull; uelkariuki@gmail.com &bull; [linkedin.com/in/uel-kariuki](https://www.linkedin.com/in/uel-kariuki)
+Nairobi, Kenya &bull; 0705361013 &bull; uelkariuki@gmail.com &bull; [linkedin.com/in/uel-kariuki](https://www.linkedin.com/in/uel-kariuki) &bull; [github.com/uelkariuki](https://github.com/uelkariuki)
 
 ---
 
