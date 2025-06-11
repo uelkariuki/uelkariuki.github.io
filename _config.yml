@@ -16,10 +16,10 @@ timezone: Africa/Nairobi
 
 title: Uel Kariuki # the main title
 
-tagline: Personal blog # it will display as the subtitle
+tagline: Passionate Software Engineer building robust solutions, from scalable web platforms (Python/JavaScript) to foundational system-level utilities (C). # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  uel, kariuki, blog, github
+  Entry-Level Software Engineer building robust web applications and efficient backend solutions with Python, Node.js, and C.
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -38,11 +38,11 @@ social:
   email: uelkariuki@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/uelkariuki # change to your Twitter homepage
+    - https://www.linkedin.com/in/uel-kariuki
     - https://github.com/uelkariuki # change to your GitHub homepage
+    - https://twitter.com/uelkariuki # change to your Twitter homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
 
 # Site Verification Settings
 webmaster_verifications:
