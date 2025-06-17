@@ -17,7 +17,7 @@ excerpt: "This project highlights hands-on experience in building comprehensive 
    analyze data effectively. Through this assignment, I developed hands-on
    experience putting together powerful visualizations using Tableau and
    have published my work on the cloud. The link for this project was
-   sourced from [Tableau HR Project](%20https://www.datawithbaraa.com/tableau/tableau-hr-project-thank-you/%20)
+   sourced from [Tableau HR Project](https://www.datawithbaraa.com/tableau/tableau-hr-project-thank-you/)
 
    The purpose of the assignment was to gain hands-on practice:
 
