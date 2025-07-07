@@ -10,6 +10,9 @@ description: "A Short reflection report whose purpose is to allow a pause and re
 1. ## **Introduction** {#introduction}
 
    This week’s assignment focused on writing a short reflection report whose purpose was to allow me to pause and reflect on the history and future of Artificial Intelligence. This was done by engaging in a recent interview with Prof Geoffrey Everest Hinton. He is a 2024 Nobel Peace Prize winner and is considered the Godfather of AI due to his great research in developing multi-layer neural networks and deep learning. I decided to look at a few key talking themes present in the interview, which included the future of work, great risks/threats posed by AI, and future trends in AI development.
+   
+   The YouTube video can be found on the link: [Godfather of AI: I Tried to Warn Them, But We’ve Already Lost Control! Geoffrey Hinton](https://youtu.be/giT0ytynSqg)
+
 
 
 2. ## **Tasks to be completed** {#tasks-to-be-completed}
