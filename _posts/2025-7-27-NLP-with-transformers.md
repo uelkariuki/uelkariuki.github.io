@@ -70,6 +70,9 @@ slug: "semantic-similarity-bert-transformers-nlp"
       ![][image8]
       *Figure 8: Calculate cosine similarity for each pair continued*
 
+	  Upon executing the code with the `0.7` similarity threshold, the model consistently produced cosine similarities well above this value for all ten sentence pairs, resulting in every pair being uniformly classified as `'similar' (1)`. This behaviour, while confirming BERT’s ability to identify semantic relatedness, indicates that the bert-based-uncased model’s [CLS] embeddings, when subjected to this specific threshold, interpret `'similarity'` very broadly. Even pairs manually labelled as dissimilar, such as `'What is AI'` vs `'How to cook pasta'`(`0.8811 similarity`)  or  `'I love to read books'` vs `'I enjoy watching movies'` (`0.9744 similarity`), yielded high scores.
+
+	  This suggests a mismatch between the inherent semantic relatedness captured by this general-purpose BERT model at the [CLS] token level and the more stringent definition of `'similarity'` implied by the ground truth labels for this task. Consequently, under the constraint of a `0.7` threshold, the current model configuration is unable to effectively differentiate truly dissimilar sentence pairs, leading to a suboptimal performance for binary classification on this dataset.
 
    6. ### **Accuracy evaluation**
 
@@ -86,6 +89,7 @@ slug: "semantic-similarity-bert-transformers-nlp"
       ![][image10]
       *Figure 10: Final Accuracy calculation*
 
+	  Following the prediction process, the model’s performance was quantitatively evaluated. With the `correct` count at `7` out of `total` of 10 sentence pairs, the final `accuracy` achieved was `70.00 %`. This accuracy figure directly reflects the observations from step 6. While the model correctly identified `7` of the `10` pairs according to the ground truth, its uniform classification of `'similar'` for many dissimilar pairs significantly impacted overall performance. This outcome further underscores that, given the `0.7` similarity threshold and the general semantic capturing capabilities of the bert-base-uncased model’s [CLS] embeddings, the model struggled to effectively distinguish between genuinely similar and truly dissimilar sentences as defined by the provided labels, leading to a notable number of false positives.
 
    8. ### **How does BERT differ from traditional NLP approaches like Bag of Words or TF-IDF?**
 
