@@ -10,7 +10,7 @@ slug: "rag-guide-langchain-hugging-face"
 ---
 
 
-1. # **Introduction**
+1. ## **Introduction**
 
    In this assignment, I applied my understanding of **Generative AI** which is a type of artificial intelligence that creates new content, such as text, images, audio and video by learning from existing data and **Retrieval-Augmented Generation** (RAG) which refers to a technique that enhances the capabilities of large language models by combining them with an external knowledge base. I used this knowledge to build a practical pipeline that retrieves relevant document chunks and generates context-aware answers.
    The objectives of this assignment were:
@@ -20,16 +20,16 @@ slug: "rag-guide-langchain-hugging-face"
    4. Implementing a complete RAG pipeline in Python using LangChain, Hugging Face Transformers, and FAISS.
    5. Practicing prompt engineering to structure queries that guide the generative model for clearer and more detailed responses.
 
-2. # **Tasks to be completed** {#tasks-to-be-completed}
+2. ## **Tasks to be completed** {#tasks-to-be-completed}
 
-   1. ## **Importing libraries**
+   1. ### **Importing libraries**
 
       The first step was to import the required libraries. The code block below is responsible for setting up the entire environment and importing the necessary tools to build a Retrieval-Augmented Generation (RAG) system. It begins by using \!pip install to install core Python packages, including langchain for the application framework, transformers for working with a large language model (LLM), sentence-transformers for creating high-quality text embeddings, faiss-cpu for efficient vector storage and search, and pypdf for handling PDF documents. Following the installation, the code imports specific classes and functions from these libraries, such as PyPDFLoader, RecursiveCharacterTextSplitter, HuggingFaceEmbeddings, and FAISS. These imports provide all the essential building blocks for the rest of the program, enabling it to load a document, process its text, create a searchable database of embeddings, and load an LLM for generating responses.
 
       ![][image1]
       *Figure 1: Importing required libraries*
 
-   2. ## **Loading the PDF**
+   2. ### **Loading the PDF**
 
       The code block performs the crucial initial step of the RAG pipeline by loading the raw data from a PDF document. It begins by creating an instance of PyPDFLoader, a specialized tool from the langchain library that is designed to read and parse the text content of PDF files. The program is specifically directed to a file named "document.pdf". The subsequent line, docs \= loader.load() executes this loading process, which reads the entire PDF and extracts the text from each page. The output of this operation is not just raw text, but a structured list of Document objects. Each Document object contains the text content of a single page (page\_content) and, importantly, includes valuable metadata such as the page number and source file. This step is essential because it transforms the unstructured raw PDF file into a formatted, page-by-page collection of data, making it ready for the next processing stages, like splitting and embedding.
 
@@ -37,7 +37,7 @@ slug: "rag-guide-langchain-hugging-face"
       *Figure 2: Loading the PDF*
 
 
-   3. ## **Split documents into chunks**
+   3. ### **Split documents into chunks**
 
       In this stage, it begins by creating an instance of RecursiveCharacterTextSplitter, a tool designed to intelligently break down large text documents. This splitter is configured with two key parameters: chunk\_size=500 and  chunk\_overlap=50. chunk\_size dictates that each text segment should have a maximum length of 500 characters, ensuring that chunks are small enough to fit within the context window of the language model without losing too much information. The chunk\_overlap parameter, set to 50, creates a small overlap of characters between consecutive chunks. This is a crucial technique for maintaining contextual continuity, as it prevents the model from losing important information that might be split between the end of one chunk and the beginning of the next. Finally,  splitter.split\_documents(docs) executes this process on the list of documents loaded in the previous step, transforming the raw page-by-page data into a list of semantically meaningful chunks that are ready to be converted into embeddings.
 
@@ -45,7 +45,7 @@ slug: "rag-guide-langchain-hugging-face"
        *Figure 3: Split documents into chunks*
 
 
-   4. ## **Create embeddings and vector score**
+   4. ### **Create embeddings and vector score**
 
       In this step, the code block demonstrates the core RAG process, from converting text into searchable numerical representations to generating a coherent answer based on retrieved information. First, it initializes HuggingFaceEmbeddings using the sentence-transformers/all-MiniLM-L6-v2 model. This model is specifically chosen for its efficiency in converting text chunks into dense numerical vectors (embeddings) that capture the semantic meaning of the text. These embeddings are then used to build a FAISS vector store. FAISS(Facebook AI Similarity Search) is an optimized library for efficient similarity search and clustering of those high-dimensional vectors, allowing for rapid retrieval of relevant information. The vectorstore.as\_retriever() method then converts this vector store into a retriever, an essential component in angChain that can fetch documents most relevant to a given query.
 
@@ -89,7 +89,7 @@ slug: "rag-guide-langchain-hugging-face"
 
 
 
-3. # **Conclusion** {#conclusion}
+3. ## **Conclusion** {#conclusion}
 
 
    This project provided a hands-on experience in building and evaluating a Retrieval-Augmented Generation (RAG) system for querying a custom document. From data loading and preprocessing, which involved splitting a PDF into manageable chunks and generating embeddings, to integrating a vector store and a large language model. I gained invaluable insights into modern LLM application development. The process culminated in creating an end-to-end RAG pipeline, which successfully retrieved relevant document context to ground the LLM’s response, preventing hallucinations, and demonstrating an effective method for question answering. This entire workflow, from data ingestion to model orchestration and context-aware generation, enhanced my understanding of how to develop, evaluate, and manage LLM solutions, greatly strengthening my foundation for future Data and AI endeavors.
@@ -99,12 +99,12 @@ slug: "rag-guide-langchain-hugging-face"
 [image1]: /assets/images/Projects/genai_images/g1.1.png
 [image2]: /assets/images/Projects/genai_images/g1.2.png
 [image3]: /assets/images/Projects/genai_images/g1.3.png
-[image4]: /assets/images/Projects/genai_images/g1.5.png
-[image5]: /assets/images/Projects/genai_images/g1.6.png
-[image6]: /assets/images/Projects/genai_images/g1.7.png
-[image7]: /assets/images/Projects/genai_images/g1.8.png
-[image8]: /assets/images/Projects/genai_images/g1.9.png
-[image9]: /assets/images/Projects/genai_images/g2.0.png
-[image10]: /assets/images/Projects/genai_images/g2.1.png
+[image4]: /assets/images/Projects/genai_images/g1.4.png
+[image5]: /assets/images/Projects/genai_images/g1.5.png
+[image6]: /assets/images/Projects/genai_images/g1.6.png
+[image7]: /assets/images/Projects/genai_images/g1.7.png
+[image8]: /assets/images/Projects/genai_images/g1.8.png
+[image9]: /assets/images/Projects/genai_images/g1.9.png
+[image10]: /assets/images/Projects/genai_images/g2.0.png
 
 
